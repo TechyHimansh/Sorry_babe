@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Message for Nehaaa ❤️ | I'm So Sorry, Janeman</title>
-  <!-- Tailwind CSS CDN -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>For My Bebess 🌸 | Suno na janemen...</title>
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Romantic Google Fonts -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Comfortaa:wght@500;700;800&family=Nunito:wght@400;600;700;800;900&family=Sacramento&family=Playfair+Display:ital,wght@1,700;1,900&display=swap" rel="stylesheet">
-  <!-- Canvas Confetti -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;0,900;1,700&display=swap" rel="stylesheet">
+  <!-- Canvas Confetti Library -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
   <script>
@@ -18,22 +18,16 @@
       theme: {
         extend: {
           fontFamily: {
-            handwriting: ['"Sacramento"', 'cursive'],
-            cute: ['"Caveat"', 'cursive'],
-            heading: ['"Comfortaa"', 'cursive'],
-            serifRose: ['"Playfair Display"', 'serif'],
-            sans: ['"Nunito"', 'sans-serif'],
+            script: ['"Great Vibes"', 'cursive'],
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Outfit"', 'sans-serif'],
           },
           colors: {
-            romantic: {
-              50: '#fff1f2',
-              100: '#ffe4e6',
-              200: '#fecdd3',
-              300: '#fda4af',
-              400: '#fb7185',
-              500: '#f43f5e',
-              600: '#e11d48',
-              700: '#be123c',
+            brand: {
+              pink: '#ff4d79',
+              deep: '#d91b5c',
+              soft: '#fff0f3',
+              card: '#ffffff',
             }
           }
         }
@@ -42,401 +36,417 @@
   </script>
 
   <style>
-    /* Much Slower, Cute & Playful Walking Chase Animation across the stage */
-    @keyframes slowWalkingChase {
-      0% {
-        transform: translateX(-340px);
-      }
-      100% {
-        transform: translateX(calc(100vw + 340px));
-      }
+    /* Prevent unwanted pull-to-refresh & overflow rubberbanding */
+    html, body {
+      overscroll-behavior-y: contain;
+      -webkit-tap-highlight-color: transparent;
     }
 
-    /* Girl's haughty, stubborn stomp walk with bobbing */
-    @keyframes girlAngryStomp {
-      0%, 100% { transform: translateY(0px) rotate(-1deg); }
-      25% { transform: translateY(-7px) rotate(-3.5deg); }
-      50% { transform: translateY(0px) rotate(1deg); }
-      75% { transform: translateY(-7px) rotate(3deg); }
+    /* 3D Floating Pink Foil Balloon SORRY */
+    .balloon-container {
+      perspective: 800px;
     }
-
-    /* Boy's guilty, pleading cautious stroll */
-    @keyframes boyGuiltyStroll {
-      0%, 100% { transform: translateY(0px) rotate(1.5deg); }
-      25% { transform: translateY(-5px) rotate(-1deg); }
-      50% { transform: translateY(0px) rotate(0deg); }
-      75% { transform: translateY(-5px) rotate(2deg); }
-    }
-
-    /* Feet stepping rotation */
-    @keyframes footStepL {
-      0%, 100% { transform: rotate(0deg); }
-      50% { transform: rotate(-15deg); }
-    }
-    @keyframes footStepR {
-      0%, 100% { transform: rotate(0deg); }
-      50% { transform: rotate(15deg); }
-    }
-
-    /* Comic Steam / Anger Puff floating from girl's head */
-    @keyframes steamPuff {
-      0% { transform: scale(0.8) translate(0, 0) rotate(0deg); opacity: 0.3; }
-      50% { transform: scale(1.25) translate(4px, -6px) rotate(15deg); opacity: 1; }
-      100% { transform: scale(0.8) translate(0, 0) rotate(0deg); opacity: 0.3; }
-    }
-
-    /* Sweat / Tear Drop drip on boy */
-    @keyframes remorseDrip {
-      0%, 100% { transform: translateY(0px) scale(0.9); opacity: 0.7; }
-      50% { transform: translateY(5px) scale(1.15); opacity: 1; }
-    }
-
-    /* Unique 3D Glowing Foil Balloon & Neon Aesthetic for SORRY */
     .balloon-letter {
       display: inline-block;
-      font-family: 'Comfortaa', cursive;
+      font-family: 'Playfair Display', serif;
       font-weight: 900;
-      color: #ff5e84;
+      color: #ff3366;
+      /* Realistic 3D Inflatable Foil Texture */
       text-shadow: 
-        0 2px 0 #ea2a5b,
-        0 4px 0 #cc1746,
-        0 7px 0 #9f0c33,
-        0 10px 22px rgba(244, 63, 94, 0.4),
-        0 0 35px rgba(251, 113, 133, 0.45);
-      animation: gentleFloat 3.8s ease-in-out infinite alternate;
-      filter: drop-shadow(0 8px 12px rgba(190, 18, 60, 0.15));
+        0 1px 0 #ff6690,
+        0 2px 0 #e6004c,
+        0 3px 0 #cc0044,
+        0 4px 0 #b3003b,
+        0 5px 0 #990033,
+        0 8px 18px rgba(217, 27, 92, 0.45);
+      animation: balloonFloat 3.8s ease-in-out infinite alternate;
+      transform-origin: center bottom;
     }
 
-    .balloon-letter:nth-child(2) { animation-delay: 0.3s; color: #fb7185; }
-    .balloon-letter:nth-child(3) { animation-delay: 0.6s; color: #f43f5e; }
-    .balloon-letter:nth-child(4) { animation-delay: 0.9s; color: #e11d48; }
-    .balloon-letter:nth-child(5) { animation-delay: 1.2s; color: #fda4af; }
+    .balloon-letter:nth-child(1) { animation-delay: 0.0s; }
+    .balloon-letter:nth-child(2) { animation-delay: 0.3s; }
+    .balloon-letter:nth-child(3) { animation-delay: 0.6s; }
+    .balloon-letter:nth-child(4) { animation-delay: 0.9s; }
+    .balloon-letter:nth-child(5) { animation-delay: 1.2s; }
 
-    @keyframes gentleFloat {
-      0% { transform: translateY(0px) rotate(-1.5deg) scale(0.98); }
-      100% { transform: translateY(-12px) rotate(2deg) scale(1.02); }
-    }
-
-    .slow-chase-track {
-      animation: slowWalkingChase 24s linear infinite;
+    @keyframes balloonFloat {
+      0% { transform: translateY(0px) rotate(-1deg) scale(0.98); }
+      50% { transform: translateY(-7px) rotate(1deg) scale(1.02); }
+      100% { transform: translateY(-13px) rotate(-0.5deg) scale(1); }
     }
 
-    .girl-motion {
-      animation: girlAngryStomp 0.8s ease-in-out infinite;
+    /* Slower, Smooth Walking Chase Loop across mobile viewport */
+    @keyframes walkingChaseMobile {
+      0% { transform: translateX(-340px); }
+      100% { transform: translateX(calc(100vw + 340px)); }
     }
 
-    .boy-motion {
-      animation: boyGuiltyStroll 0.8s ease-in-out infinite;
+    /* Angry girl stomp */
+    @keyframes girlPoutStomp {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      25% { transform: translateY(-6px) rotate(-3deg); }
+      50% { transform: translateY(0px) rotate(0deg); }
+      75% { transform: translateY(-6px) rotate(3deg); }
     }
 
-    .steam-anim {
-      animation: steamPuff 1.6s ease-in-out infinite;
+    /* Boy pleading cautious stroll */
+    @keyframes boyCarefulFollow {
+      0%, 100% { transform: translateY(0px) rotate(1deg); }
+      25% { transform: translateY(-4px) rotate(-1.5deg); }
+      50% { transform: translateY(0px) rotate(0deg); }
+      75% { transform: translateY(-4px) rotate(1.5deg); }
     }
 
-    .tear-anim {
-      animation: remorseDrip 1.4s ease-in-out infinite;
+    /* Comic Steam Puff */
+    @keyframes angrySteam {
+      0% { transform: scale(0.8) translate(0, 0); opacity: 0.4; }
+      50% { transform: scale(1.25) translate(3px, -4px); opacity: 1; }
+      100% { transform: scale(0.8) translate(0, 0); opacity: 0.4; }
     }
 
-    /* Lined notepad effect for the letter */
-    .lined-letter {
-      background: #fffdf9;
-      background-image: repeating-linear-gradient(#fffdf9 0px, #fffdf9 27px, #fed7aa 28px);
-      line-height: 28px;
+    /* Remorse Tear Drip */
+    @keyframes tearDrop {
+      0%, 100% { transform: translateY(0); opacity: 0.7; }
+      50% { transform: translateY(4px); opacity: 1; }
     }
 
-    /* 3D Card flip */
-    .perspective-card {
-      perspective: 1000px;
+    .chase-wrapper {
+      animation: walkingChaseMobile 22s linear infinite;
+      will-change: transform;
     }
-    .transform-style-3d {
-      transform-style: preserve-3d;
+
+    .girl-anim {
+      animation: girlPoutStomp 0.75s ease-in-out infinite;
     }
-    .backface-hidden {
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
+
+    .boy-anim {
+      animation: boyCarefulFollow 0.75s ease-in-out infinite;
     }
-    .rotate-y-180 {
-      transform: rotateY(180deg);
+
+    .steam-glow {
+      animation: angrySteam 1.5s ease-in-out infinite;
+    }
+
+    .tear-glow {
+      animation: tearDrop 1.2s ease-in-out infinite;
+    }
+
+    /* Card 3D Flip Styles */
+    .perspective-card { perspective: 1000px; }
+    .transform-style-3d { transform-style: preserve-3d; }
+    .backface-hidden { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+    .rotate-y-180 { transform: rotateY(180deg); }
+
+    /* Vintage Paper Texture */
+    .parchment-sheet {
+      background: radial-gradient(circle at 50% 50%, #ffffff 0%, #fff7f2 100%);
+      box-shadow: 0 10px 30px rgba(244, 63, 94, 0.12), inset 0 0 25px rgba(254, 215, 170, 0.2);
     }
   </style>
 </head>
 
-<body class="bg-gradient-to-br from-rose-50 via-pink-50 to-amber-50 text-slate-800 font-sans min-h-screen relative overflow-x-hidden selection:bg-rose-200">
+<body class="bg-gradient-to-b from-[#fff6f8] via-[#ffeff3] to-[#ffe5ec] text-slate-800 font-sans min-h-screen flex flex-col justify-between selection:bg-rose-400 selection:text-white relative overflow-x-hidden">
 
-  <!-- Ambient Floating Heart and Star Particles Background -->
-  <div id="particles-container" class="pointer-events-none fixed inset-0 overflow-hidden z-0"></div>
+  <!-- Ambient Floating Heart & Petal Particles -->
+  <div id="ambient-particles" class="fixed inset-0 pointer-events-none z-0 overflow-hidden"></div>
 
-  <!-- FLOATING NAVIGATION BAR & CONTROLS -->
-  <header class="fixed top-3 inset-x-0 z-50 flex justify-center px-3 pointer-events-none">
-    <nav class="pointer-events-auto bg-white/85 backdrop-blur-md border border-rose-200/90 shadow-xl rounded-full px-2 sm:px-4 py-1.5 flex items-center space-x-1 sm:space-x-2">
-      <button onclick="navigateTo('home')" id="nav-home" class="nav-btn px-2.5 sm:px-3.5 py-1.5 rounded-full text-xs font-extrabold transition-all duration-200 flex items-center gap-1 text-rose-600 bg-rose-100">
-        <span>🏠</span><span class="hidden md:inline">Home</span>
+  <!-- FLOATING TOUCH NAVBAR (Compact & Centered for Mobile Viewport) -->
+  <header class="fixed top-2 inset-x-0 z-50 flex justify-center px-3 pointer-events-none">
+    <nav class="pointer-events-auto bg-white/90 backdrop-blur-md border border-rose-200 shadow-md rounded-full px-3 py-1.5 flex items-center space-x-1.5 sm:space-x-3">
+      <button onclick="navigateTo('home')" id="nav-home" class="nav-tab px-3 py-1.5 rounded-full text-xs font-bold transition flex items-center gap-1 bg-gradient-to-r from-rose-500 to-pink-500 text-white shadow-sm shadow-rose-300">
+        <span>🏠</span><span class="hidden xs:inline">Home</span>
       </button>
-      <button onclick="navigateTo('letter')" id="nav-letter" class="nav-btn px-2.5 sm:px-3.5 py-1.5 rounded-full text-xs font-extrabold transition-all duration-200 flex items-center gap-1 text-gray-600 hover:text-rose-600 hover:bg-rose-50">
-        <span>💌</span><span class="hidden md:inline">The Letter</span>
+      <button onclick="navigateTo('letter')" id="nav-letter" class="nav-tab px-2.5 py-1.5 rounded-full text-xs font-bold text-rose-800 hover:text-rose-600 transition flex items-center gap-1">
+        <span>💌</span><span class="hidden xs:inline">Letter</span>
       </button>
-      <button onclick="navigateTo('reasons')" id="nav-reasons" class="nav-btn px-2.5 sm:px-3.5 py-1.5 rounded-full text-xs font-extrabold transition-all duration-200 flex items-center gap-1 text-gray-600 hover:text-rose-600 hover:bg-rose-50">
-        <span>💖</span><span class="hidden md:inline">Reasons</span>
+      <button onclick="navigateTo('reasons')" id="nav-reasons" class="nav-tab px-2.5 py-1.5 rounded-full text-xs font-bold text-rose-800 hover:text-rose-600 transition flex items-center gap-1">
+        <span>💖</span><span class="hidden xs:inline">Reasons</span>
       </button>
-      <button onclick="navigateTo('forgive')" id="nav-forgive" class="nav-btn px-2.5 sm:px-3.5 py-1.5 rounded-full text-xs font-extrabold transition-all duration-200 flex items-center gap-1 text-gray-600 hover:text-rose-600 hover:bg-rose-50">
-        <span>🧸</span><span class="hidden md:inline">Forgive Me?</span>
+      <button onclick="navigateTo('forgive')" id="nav-forgive" class="nav-tab px-2.5 py-1.5 rounded-full text-xs font-bold text-rose-800 hover:text-rose-600 transition flex items-center gap-1">
+        <span>🧸</span><span class="hidden xs:inline">Forgive?</span>
       </button>
-      <button onclick="navigateTo('coupons')" id="nav-coupons" class="nav-btn px-2.5 sm:px-3.5 py-1.5 rounded-full text-xs font-extrabold transition-all duration-200 flex items-center gap-1 text-gray-600 hover:text-rose-600 hover:bg-rose-50">
-        <span>🎟️</span><span class="hidden md:inline">Coupons</span>
-      </button>
-
-      <div class="h-4 w-[1px] bg-rose-200 mx-1"></div>
-
-      <!-- Music Player Toggle -->
-      <button id="musicToggleBtn" onclick="toggleAudio()" class="p-2 text-xs rounded-full bg-rose-50 hover:bg-rose-100 text-rose-600 transition" title="Romantic Chime Music">
-        <span id="musicIcon">🎵</span>
+      <button onclick="navigateTo('coupons')" id="nav-coupons" class="nav-tab px-2.5 py-1.5 rounded-full text-xs font-bold text-rose-800 hover:text-rose-600 transition flex items-center gap-1">
+        <span>🎟️</span><span class="hidden xs:inline">Passes</span>
       </button>
 
-      <!-- GitHub Guide Button -->
-      <button onclick="toggleModal('githubModal')" class="p-2 text-xs rounded-full bg-rose-50 hover:bg-rose-100 text-gray-700 transition" title="Host on GitHub Pages">
+      <div class="h-3.5 w-[1px] bg-rose-200 mx-0.5"></div>
+
+      <!-- Romantic Melody Chime -->
+      <button onclick="toggleAudio()" class="p-1.5 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-600 border border-rose-200 text-xs transition" title="Music">
+        <span id="musicIndicator">🎵</span>
+      </button>
+
+      <!-- GitHub Hosting Instructions Modal Trigger -->
+      <button onclick="toggleModal('deployGuideModal')" class="p-1.5 rounded-full bg-rose-50 hover:bg-rose-100 text-slate-700 border border-rose-200 text-xs transition" title="Host Guide">
         <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
       </button>
     </nav>
   </header>
 
-  <!-- MAIN STORYFLOW CONTAINER (Multi-Page Routed Views) -->
-  <main class="relative z-10 w-full max-w-5xl mx-auto px-4 pt-20 pb-12 flex flex-col items-center">
+  <!-- APP CONTENT CONTAINER -->
+  <main class="relative z-10 w-full max-w-lg mx-auto px-3 pt-14 pb-12 flex-1 flex flex-col justify-center">
 
     <!-- ======================================================== -->
-    <!-- PAGE 1: HOME PAGE                                       -->
+    <!-- SCREEN 1: HOME PAGE (Clean Phone Layout & Chase)         -->
     <!-- ======================================================== -->
-    <div id="page-home" class="page-view w-full flex flex-col items-center justify-between min-h-[76vh] relative">
+    <div id="view-home" class="page-screen w-full flex flex-col items-center justify-between min-h-[82vh] py-2">
+      
+      <!-- TOP QUOTE CARD (Structured cleanly as requested) -->
+      <div class="w-full bg-white/95 backdrop-blur-md rounded-3xl p-5 shadow-[0_12px_30px_rgba(244,63,94,0.14)] border border-rose-200/90 text-center relative z-20">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-1.5 bg-gradient-to-r from-rose-500 to-pink-500 text-white text-[11px] font-bold px-3.5 py-1 rounded-full uppercase tracking-wider mb-2.5 shadow-sm shadow-rose-300">
+          <span>💌</span>
+          <span>A MESSAGE FOR MY BEBESSS</span>
+          <span>✨</span>
+        </div>
 
-      <!-- Artistic 3D Foil Balloon Style "SORRY" Typography -->
-      <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none z-0">
-        <div class="relative text-center">
-          <div class="flex items-center justify-center space-x-1 sm:space-x-3 text-7xl sm:text-9xl md:text-[11rem] leading-none mb-1">
+        <!-- Quote -->
+        <h2 class="text-lg sm:text-xl font-extrabold text-slate-800 leading-snug font-sans">
+          "Suno na janemen.. Maaf kar do na... 😅 Or kitna naaraaz rahogi. Kuch le de ke Maan Jaao na👉👈"
+        </h2>
+
+        <!-- Subtext Instruction -->
+        <div class="mt-3 bg-rose-50/90 py-2 px-3 rounded-2xl border border-rose-200 text-rose-600 text-xs font-semibold leading-relaxed">
+          Niche dekho... I'll keep following you with roses until you agree to hear me out.
+        </div>
+      </div>
+
+      <!-- MIDDLE STAGE: FLOATING 3D BALLOON 'SORRY' & WALKING CHARACTERS -->
+      <div class="w-full relative flex flex-col items-center justify-center my-3 overflow-hidden rounded-3xl bg-white/40 border border-rose-100 shadow-inner py-2 min-h-[300px]">
+        
+        <!-- Floating 3D Balloon Backdrop (Exact 3D floating effect) -->
+        <div class="balloon-container w-full text-center select-none pointer-events-none mb-1">
+          <div class="flex items-center justify-center space-x-1.5 sm:space-x-2 text-6xl sm:text-7xl leading-none">
             <span class="balloon-letter">S</span>
             <span class="balloon-letter">O</span>
             <span class="balloon-letter">R</span>
             <span class="balloon-letter">R</span>
             <span class="balloon-letter">Y</span>
           </div>
-          <div class="flex items-center justify-center space-x-2 text-rose-300 text-sm tracking-widest font-bold uppercase">
-            <span>✨</span>
-            <span>Meri pyari Nehaaa</span>
-            <span>✨</span>
+          <div class="text-[12px] font-bold tracking-widest text-rose-500 mt-1 uppercase flex items-center justify-center gap-1">
+            <span>✨</span><span>MERI PYARI JAAN</span><span>✨</span>
           </div>
         </div>
-      </div>
 
-      <!-- Hindi Dialogue & Header Card -->
-      <div class="relative z-20 text-center max-w-xl mx-auto bg-white/85 backdrop-blur-md p-6 sm:p-7 rounded-3xl shadow-xl border border-rose-200/80 transform hover:scale-[1.01] transition">
-        <div class="inline-flex items-center gap-2 bg-gradient-to-r from-rose-500 to-pink-500 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider mb-3 shadow-sm">
-          <span>💌</span>
-          <span>A message for Nehaaa</span>
-          <span>✨</span>
-        </div>
-        
-        <h2 class="text-xl sm:text-2xl md:text-3xl font-extrabold text-gray-800 font-heading leading-snug">
-          "Suno na janemen.. Maaf kar do na... 😅 Or kitna naaraaz rahogi. Kuch le de ke Maan Jaao na👉👈"
-        </h2>
-
-        <p class="text-xs sm:text-sm text-rose-600 font-bold mt-3.5 bg-rose-50 py-2 px-4 rounded-2xl border border-rose-100 inline-block">
-          Niche dekho... I'll keep following you with roses until you agree to hear me out.
-        </p>
-      </div>
-
-      <!-- Animated Walking Canvas Stage -->
-      <div class="w-full relative h-72 sm:h-80 overflow-hidden my-4 flex items-end border-b-2 border-dashed border-rose-300/80">
-        
-        <!-- Floor Lawn Flowers -->
-        <div class="absolute bottom-0 inset-x-0 flex justify-between px-4 text-rose-300 text-lg opacity-80 pointer-events-none pb-1">
-          <span>🌸</span><span>🌷</span><span>🌹</span><span>🌼</span><span>🌸</span><span>🌷</span><span>🌺</span><span>🌹</span><span>🌼</span><span>🌸</span><span>🌷</span>
-        </div>
-
-        <!-- Slow, Cute, Funny Chase Track -->
-        <div class="slow-chase-track absolute bottom-3 flex items-end space-x-12 sm:space-x-16 cursor-pointer" onclick="pokeCharacters()">
+        <!-- Character Walking Canvas / Garden Runway -->
+        <div class="w-full relative h-48 overflow-hidden flex items-end">
           
-          <!-- BOY CHARACTER -->
-          <div class="flex flex-col items-center relative boy-motion">
-            <div id="boy-speech-bubble" class="bg-blue-50/95 text-blue-900 border border-blue-200 shadow-md text-[11px] sm:text-xs font-semibold px-3 py-1.5 rounded-2xl mb-1 text-center whitespace-nowrap transform -translate-y-1 relative">
-              Janeman ruko toh sahi! I got your roses! 🥺🌹
-              <div class="absolute left-1/2 -bottom-1.5 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-blue-100"></div>
-            </div>
-
-            <div class="w-24 sm:w-28 h-40 relative">
-              <svg viewBox="0 0 120 160" class="w-full h-full drop-shadow-md">
-                <path d="M22,50 C18,22 34,8 65,10 C90,12 102,28 98,52 C88,38 72,24 55,24 C34,24 26,38 22,50 Z" fill="#4A2E1B"/>
-                <path d="M95,38 L104,46 L92,52 Z" fill="#4A2E1B"/>
-                <path class="tear-anim" d="M24,38 Q27,42 27,46 A3,3 0 0,1 21,46 Q21,42 24,38 Z" fill="#38BDF8"/>
-                <path d="M28,45 C28,26 84,26 84,45 C84,69 74,78 56,78 C38,78 28,69 28,45 Z" fill="#FFE0BD"/>
-                <circle cx="26" cy="50" r="5" fill="#FFD0A8"/>
-                <circle cx="86" cy="50" r="5" fill="#FFD0A8"/>
-                <ellipse cx="45" cy="48" rx="6" ry="7" fill="#FFFFFF"/>
-                <ellipse cx="45" cy="49" rx="4.5" ry="5.5" fill="#2E1C12"/>
-                <circle cx="43" cy="46" r="2" fill="#FFFFFF"/>
-                <circle cx="46.5" cy="51" r="1" fill="#FFFFFF"/>
-                <ellipse cx="68" cy="48" rx="6" ry="7" fill="#FFFFFF"/>
-                <ellipse cx="68" cy="49" rx="4.5" ry="5.5" fill="#2E1C12"/>
-                <circle cx="66" cy="46" r="2" fill="#FFFFFF"/>
-                <circle cx="69.5" cy="51" r="1" fill="#FFFFFF"/>
-                <path d="M38,38 Q45,34 52,38" stroke="#4A2E1B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                <path d="M62,38 Q68,34 76,38" stroke="#4A2E1B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                <ellipse cx="38" cy="56" rx="5" ry="3" fill="#FB7185" opacity="0.7"/>
-                <ellipse cx="75" cy="56" rx="5" ry="3" fill="#FB7185" opacity="0.7"/>
-                <path d="M50,65 Q57,61 64,65" stroke="#4A2E1B" stroke-width="2" fill="none" stroke-linecap="round"/>
-                <path d="M34,78 L78,78 L85,118 L28,118 Z" fill="#3B82F6" rx="3"/>
-                <polygon points="48,78 56,98 64,78" fill="#FFFFFF"/>
-                <polygon points="54,92 58,92 56,98" fill="#EF4444"/>
-                <path d="M40,78 L53,104 L46,118" stroke="#1D4ED8" stroke-width="2" fill="none"/>
-                <path d="M72,78 L59,104 L66,118" stroke="#1D4ED8" stroke-width="2" fill="none"/>
-                <path d="M36,88 Q62,96 86,88" stroke="#FFE0BD" stroke-width="8" stroke-linecap="round" fill="none"/>
-                <g transform="translate(76, 68)">
-                  <polygon points="12,20 0,44 24,44" fill="#FEF08A"/>
-                  <polygon points="12,22 3,38 21,38" fill="#FACC15"/>
-                  <path d="M6,40 Q12,45 18,40" stroke="#EAB308" stroke-width="1.5" fill="none"/>
-                  <line x1="12" y1="12" x2="12" y2="24" stroke="#15803D" stroke-width="2.5"/>
-                  <line x1="8" y1="14" x2="12" y2="24" stroke="#15803D" stroke-width="2"/>
-                  <line x1="16" y1="14" x2="12" y2="24" stroke="#15803D" stroke-width="2"/>
-                  <circle cx="12" cy="7" r="7.5" fill="#E11D48"/>
-                  <circle cx="5" cy="11" r="6" fill="#F43F5E"/>
-                  <circle cx="19" cy="11" r="6" fill="#FB7185"/>
-                  <circle cx="12" cy="3" r="5" fill="#FECDD3"/>
-                  <circle cx="12" cy="7" r="2.5" fill="#BE123C"/>
-                </g>
-                <path d="M40,118 L54,118 L52,152 L38,152 Z" fill="#1E293B"/>
-                <path d="M58,118 L72,118 L74,152 L60,152 Z" fill="#1E293B"/>
-                <ellipse cx="45" cy="154" rx="7" ry="4" fill="#0F172A"/>
-                <ellipse cx="67" cy="154" rx="7" ry="4" fill="#0F172A"/>
-              </svg>
-            </div>
-            <span class="text-[10px] font-bold text-blue-600 bg-blue-100 px-2.5 py-0.5 rounded-full uppercase tracking-wider mt-1">Regretful Babe 🥺</span>
+          <!-- Bottom Garden Flowers -->
+          <div class="absolute bottom-0 inset-x-0 h-6 border-b-2 border-rose-200 flex justify-around text-xs opacity-75 pointer-events-none pb-0.5">
+            <span>🌷</span><span>🌹</span><span>🌸</span><span>🌷</span><span>🌺</span><span>🌹</span><span>🌸</span><span>🌷</span>
           </div>
 
-          <!-- GIRL CHARACTER -->
-          <div class="flex flex-col items-center relative girl-motion">
-            <div id="girl-speech-bubble" class="bg-rose-100/95 text-rose-900 border border-rose-300 shadow-md text-[11px] sm:text-xs font-semibold px-3 py-1.5 rounded-2xl mb-1 text-center whitespace-nowrap transform -translate-y-1 relative">
-              Hmph! Baat nahi karni mujhe! 😤❌
-              <div class="absolute left-1/2 -bottom-1.5 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-rose-200"></div>
+          <!-- THE CUTE CHASE SCENE (Slow, cute, funny) -->
+          <div class="chase-wrapper absolute bottom-1 flex items-end space-x-9 cursor-pointer" onclick="pokeCharacters()">
+            
+            <!-- BOY (Pleading, Tears, Blue Blazer, Holding Out Bouquet of Roses) -->
+            <div class="flex flex-col items-center relative boy-anim">
+              <!-- Speech Bubble -->
+              <div id="boyBubble" class="bg-white text-blue-900 border border-blue-200 shadow-md text-[10px] font-bold px-2.5 py-1 rounded-xl mb-1 text-center whitespace-nowrap relative">
+                Janeman ruko toh sahi! I got your roses! 🥺🌹
+                <div class="absolute left-1/2 -bottom-1 transform -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-white"></div>
+              </div>
+
+              <!-- Boy Graphic matching user's illustration -->
+              <div class="w-20 h-32 relative">
+                <svg viewBox="0 0 120 160" class="w-full h-full drop-shadow-[0_6px_10px_rgba(0,0,0,0.12)]">
+                  <!-- Hair (Brown side-parted hairstyle) -->
+                  <path d="M22,50 C18,22 34,8 65,10 C90,12 102,28 98,52 C88,38 72,24 55,24 C34,24 26,38 22,50 Z" fill="#4A2E1B"/>
+                  
+                  <!-- Tear Drip -->
+                  <path class="tear-glow" d="M23,38 Q26,42 26,46 A3,3 0 0,1 20,46 Q20,42 23,38 Z" fill="#38BDF8"/>
+                  
+                  <!-- Head -->
+                  <path d="M28,45 C28,26 84,26 84,45 C84,69 74,78 56,78 C38,78 28,69 28,45 Z" fill="#FFE0BD"/>
+                  <circle cx="26" cy="50" r="5" fill="#FFD0A8"/>
+                  <circle cx="86" cy="50" r="5" fill="#FFD0A8"/>
+                  
+                  <!-- Pleading Puppy Eyes -->
+                  <ellipse cx="45" cy="48" rx="6" ry="7" fill="#FFFFFF"/>
+                  <ellipse cx="45" cy="49" rx="4.5" ry="5.5" fill="#2E1C12"/>
+                  <circle cx="43" cy="46" r="2" fill="#FFFFFF"/>
+                  
+                  <ellipse cx="68" cy="48" rx="6" ry="7" fill="#FFFFFF"/>
+                  <ellipse cx="68" cy="49" rx="4.5" ry="5.5" fill="#2E1C12"/>
+                  <circle cx="66" cy="46" r="2" fill="#FFFFFF"/>
+                  
+                  <!-- Pleading Eyebrows & Cheeks -->
+                  <path d="M38,38 Q45,34 52,38" stroke="#4A2E1B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                  <path d="M62,38 Q68,34 76,38" stroke="#4A2E1B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                  <ellipse cx="38" cy="56" rx="5" ry="3" fill="#FB7185" opacity="0.8"/>
+                  <ellipse cx="75" cy="56" rx="5" ry="3" fill="#FB7185" opacity="0.8"/>
+                  
+                  <!-- Sad sweet mouth -->
+                  <path d="M50,65 Q57,61 64,65" stroke="#4A2E1B" stroke-width="2" fill="none" stroke-linecap="round"/>
+                  
+                  <!-- Blue Blazer Suit -->
+                  <path d="M34,78 L78,78 L85,118 L28,118 Z" fill="#2563EB" rx="3"/>
+                  <polygon points="48,78 56,98 64,78" fill="#FFFFFF"/>
+                  <polygon points="54,92 58,92 56,98" fill="#EF4444"/>
+                  
+                  <!-- Arms stretched holding roses -->
+                  <path d="M36,88 Q62,96 86,88" stroke="#FFE0BD" stroke-width="8" stroke-linecap="round" fill="none"/>
+                  
+                  <!-- Red Rose Bouquet -->
+                  <g transform="translate(76, 68)">
+                    <polygon points="12,20 0,44 24,44" fill="#FEF08A"/>
+                    <circle cx="12" cy="7" r="8" fill="#E11D48"/>
+                    <circle cx="5" cy="11" r="6" fill="#F43F5E"/>
+                    <circle cx="19" cy="11" r="6" fill="#FB7185"/>
+                    <circle cx="12" cy="3" r="5" fill="#FECDD3"/>
+                  </g>
+                  
+                  <!-- Pants & Shoes -->
+                  <path d="M40,118 L54,118 L52,152 L38,152 Z" fill="#1E293B"/>
+                  <path d="M58,118 L72,118 L74,152 L60,152 Z" fill="#1E293B"/>
+                  <ellipse cx="45" cy="154" rx="7" ry="4" fill="#0F172A"/>
+                  <ellipse cx="67" cy="154" rx="7" ry="4" fill="#0F172A"/>
+                </svg>
+              </div>
+              <span class="text-[9px] font-bold text-blue-700 bg-blue-100 border border-blue-200 px-2 py-0.5 rounded-full uppercase mt-1">REGRETFUL BABE 🥺</span>
             </div>
 
-            <div class="w-24 sm:w-28 h-40 relative">
-              <svg viewBox="0 0 120 160" class="w-full h-full drop-shadow-md">
-                <g class="steam-anim" transform="translate(80, 10)">
-                  <path d="M4,4 L12,12 M12,4 L4,12" stroke="#E11D48" stroke-width="2.5" stroke-linecap="round"/>
-                  <path d="M0,8 L16,8 M8,0 L8,16" stroke="#E11D48" stroke-width="2" stroke-linecap="round"/>
-                </g>
-                <path d="M24,35 C18,72 22,96 32,102 C34,75 33,48 33,38 Z" fill="#7C2D12"/>
-                <path d="M86,35 C92,72 88,96 78,102 C76,75 77,48 77,38 Z" fill="#7C2D12"/>
-                <path d="M28,42 C28,20 82,20 82,42 C82,68 72,76 55,76 C38,76 28,68 28,42 Z" fill="#FFE5D9"/>
-                <path d="M28,34 C36,16 74,16 82,34" stroke="#C084FC" stroke-width="7" fill="none" stroke-linecap="round"/>
-                <path d="M26,38 C38,24 72,24 84,38 C77,32 62,30 55,36 C48,30 33,32 26,38 Z" fill="#9A3412"/>
-                <path d="M37,46 Q43,50 49,46" stroke="#1E293B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                <path d="M61,46 Q67,50 73,46" stroke="#1E293B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                <path d="M35,39 L47,43" stroke="#451A03" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M75,39 L63,43" stroke="#451A03" stroke-width="2.5" stroke-linecap="round"/>
-                <ellipse cx="36" cy="54" rx="5" ry="3.5" fill="#F43F5E" opacity="0.8"/>
-                <ellipse cx="74" cy="54" rx="5" ry="3.5" fill="#F43F5E" opacity="0.8"/>
-                <path d="M49,63 Q55,59 61,63" stroke="#9F1239" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                <path d="M30,76 L80,76 L86,112 L24,112 Z" fill="#7E22CE" rx="4"/>
-                <polygon points="50,76 55,94 60,76" fill="#FDE047"/>
-                <path d="M28,88 C38,104 72,104 82,88" stroke="#FFE5D9" stroke-width="8" stroke-linecap="round" fill="none"/>
-                <path d="M33,92 C43,100 67,100 77,92" stroke="#6B21A8" stroke-width="4.5" stroke-linecap="round" fill="none"/>
-                <path d="M32,112 L78,112 L82,126 L28,126 Z" fill="#374151"/>
-                <g>
-                  <rect x="40" y="126" width="9" height="26" fill="#18181B"/>
-                  <rect x="40" y="128" width="9" height="3" fill="#E11D48"/>
-                  <rect x="40" y="134" width="9" height="3" fill="#E11D48"/>
-                  <rect x="40" y="140" width="9" height="3" fill="#E11D48"/>
-                  <rect x="40" y="146" width="9" height="3" fill="#E11D48"/>
-                </g>
-                <g>
-                  <rect x="61" y="126" width="9" height="26" fill="#18181B"/>
-                  <rect x="61" y="128" width="9" height="3" fill="#E11D48"/>
-                  <rect x="61" y="134" width="9" height="3" fill="#E11D48"/>
-                  <rect x="61" y="140" width="9" height="3" fill="#E11D48"/>
-                  <rect x="61" y="146" width="9" height="3" fill="#E11D48"/>
-                </g>
-                <ellipse cx="44" cy="154" rx="7" ry="4" fill="#000000"/>
-                <ellipse cx="66" cy="154" rx="7" ry="4" fill="#000000"/>
-              </svg>
+            <!-- GIRL (Neha - My Bebess, Mad, Crossed Arms, Purple Cardigan & Striped Stockings) -->
+            <div class="flex flex-col items-center relative girl-anim">
+              <!-- Speech Bubble -->
+              <div id="girlBubble" class="bg-white text-rose-700 border border-rose-200 shadow-md text-[10px] font-bold px-2.5 py-1 rounded-xl mb-1 text-center whitespace-nowrap relative">
+                Hmph! Baat nahi karni! 😤
+                <div class="absolute left-1/2 -bottom-1 transform -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-white"></div>
+              </div>
+
+              <!-- Girl Graphic matching user's illustration -->
+              <div class="w-20 h-32 relative">
+                <svg viewBox="0 0 120 160" class="w-full h-full drop-shadow-[0_6px_10px_rgba(0,0,0,0.12)]">
+                  <!-- Steam Anger Icon -->
+                  <g class="steam-glow" transform="translate(80, 8)">
+                    <path d="M2,2 L10,10 M10,2 L2,10" stroke="#F43F5E" stroke-width="2.5" stroke-linecap="round"/>
+                  </g>
+                  
+                  <!-- Hair (Brown Bob) -->
+                  <path d="M24,35 C18,72 22,96 32,102 C34,75 33,48 33,38 Z" fill="#7C2D12"/>
+                  <path d="M86,35 C92,72 88,96 78,102 C76,75 77,48 77,38 Z" fill="#7C2D12"/>
+                  <path d="M28,42 C28,20 82,20 82,42 C82,68 72,76 55,76 C38,76 28,68 28,42 Z" fill="#FFE5D9"/>
+                  
+                  <!-- Purple Headband -->
+                  <path d="M28,34 C36,16 74,16 82,34" stroke="#C084FC" stroke-width="6.5" fill="none" stroke-linecap="round"/>
+                  <path d="M26,38 C38,24 72,24 84,38 C77,32 62,30 55,36 C48,30 33,32 26,38 Z" fill="#9A3412"/>
+                  
+                  <!-- Angry Side-Glance Eyes -->
+                  <path d="M37,46 Q43,50 49,46" stroke="#1E293B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                  <path d="M61,46 Q67,50 73,46" stroke="#1E293B" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                  <ellipse cx="36" cy="54" rx="5.5" ry="3.5" fill="#F43F5E" opacity="0.9"/>
+                  <ellipse cx="74" cy="54" rx="5.5" ry="3.5" fill="#F43F5E" opacity="0.9"/>
+                  
+                  <!-- Pouty Mouth -->
+                  <path d="M49,63 Q55,59 61,63" stroke="#9F1239" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                  
+                  <!-- Purple Cardigan Hoodie & Yellow Accent -->
+                  <path d="M30,76 L80,76 L86,112 L24,112 Z" fill="#7E22CE" rx="4"/>
+                  <polygon points="50,76 55,94 60,76" fill="#FDE047"/>
+                  
+                  <!-- Crossed Arms Defiant -->
+                  <path d="M28,88 C38,104 72,104 82,88" stroke="#FFE5D9" stroke-width="7" stroke-linecap="round" fill="none"/>
+                  <path d="M33,92 C43,100 67,100 77,92" stroke="#6B21A8" stroke-width="4" stroke-linecap="round" fill="none"/>
+                  
+                  <!-- Skirt & Striped Leggings -->
+                  <path d="M32,112 L78,112 L82,126 L28,126 Z" fill="#374151"/>
+                  <g>
+                    <rect x="40" y="126" width="9" height="26" fill="#18181B"/>
+                    <rect x="40" y="129" width="9" height="3" fill="#E11D48"/>
+                    <rect x="40" y="136" width="9" height="3" fill="#E11D48"/>
+                    <rect x="40" y="143" width="9" height="3" fill="#E11D48"/>
+                  </g>
+                  <g>
+                    <rect x="61" y="126" width="9" height="26" fill="#18181B"/>
+                    <rect x="61" y="129" width="9" height="3" fill="#E11D48"/>
+                    <rect x="61" y="136" width="9" height="3" fill="#E11D48"/>
+                    <rect x="61" y="143" width="9" height="3" fill="#E11D48"/>
+                  </g>
+                  
+                  <!-- Shoes -->
+                  <ellipse cx="44" cy="154" rx="7" ry="4" fill="#000000"/>
+                  <ellipse cx="66" cy="154" rx="7" ry="4" fill="#000000"/>
+                </svg>
+              </div>
+              <span class="text-[9px] font-bold text-rose-700 bg-rose-100 border border-rose-200 px-2 py-0.5 rounded-full uppercase mt-1">MY BEBESSS (MAD) 😤</span>
             </div>
-            <span class="text-[10px] font-bold text-rose-600 bg-rose-100 px-2.5 py-0.5 rounded-full uppercase tracking-wider mt-1">Nehaaa (Mad Girl) 😤</span>
+
           </div>
 
         </div>
 
       </div>
 
-      <!-- Navigation to Next Page: Letter -->
-      <div class="relative z-20 flex flex-col items-center mt-2">
-        <button onclick="navigateTo('letter')" class="group px-8 py-3.5 bg-gradient-to-r from-rose-500 via-pink-500 to-rose-600 text-white font-extrabold text-base rounded-full shadow-lg shadow-rose-300 hover:shadow-2xl hover:scale-105 active:scale-95 transition duration-300 flex items-center space-x-3">
+      <!-- BOTTOM CALL TO ACTION BUTTON (Big, tap-friendly) -->
+      <div class="w-full flex flex-col items-center mt-1 z-20">
+        <button onclick="navigateTo('letter')" class="w-full py-4 px-6 bg-gradient-to-r from-rose-500 via-pink-500 to-rose-600 hover:from-rose-600 hover:to-pink-600 active:scale-95 text-white font-extrabold text-base rounded-2xl shadow-[0_10px_25px_rgba(244,63,94,0.4)] flex items-center justify-center space-x-2 transition-all">
           <span>Open My Letter 💌</span>
-          <span class="inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
+          <span class="text-lg">&rarr;</span>
         </button>
-        <p class="text-xs text-gray-500 mt-2 font-medium">Tip: Tap on the characters walking to hear them talk! 💕</p>
+        <p class="text-[11px] text-rose-500 font-semibold mt-2">Tap characters while walking to hear them talk 💕</p>
       </div>
 
     </div>
 
     <!-- ======================================================== -->
-    <!-- PAGE 2: THE LETTER PAGE (Standalone Page)                -->
+    <!-- SCREEN 2: THE LETTER                                     -->
     <!-- ======================================================== -->
-    <div id="page-letter" class="page-view hidden w-full max-w-2xl flex flex-col items-center">
+    <div id="view-letter" class="page-screen hidden w-full flex flex-col items-center py-2">
       
-      <div class="text-center mb-6">
-        <span class="text-xs font-bold uppercase tracking-widest text-rose-600 bg-rose-100 px-3 py-1 rounded-full">Only For You</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-800 font-heading mt-2">To my janeman</h2>
+      <div class="text-center mb-3">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-rose-600 bg-rose-100 border border-rose-200 px-3 py-1 rounded-full">Straight From My Heart</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800 font-serif mt-1.5">To my janeman</h2>
       </div>
 
-      <!-- Envelope & Letter Container -->
-      <div class="w-full relative bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-9 shadow-xl border border-rose-200">
+      <!-- Letter Body with Parchment Styling -->
+      <div class="w-full parchment-sheet rounded-3xl p-5 sm:p-6 border border-rose-200 shadow-xl text-stone-800 text-sm leading-relaxed relative">
         
-        <div class="flex items-center justify-between pb-3 border-b border-pink-100">
+        <div class="flex items-center justify-between pb-3 mb-3 border-b border-rose-200/80">
           <div class="flex items-center space-x-2">
             <span class="text-2xl">🥹😦</span>
             <div>
-              <p class="text-xs font-extrabold text-gray-700">Sincerely Yours 🥹😦</p>
-              <p class="text-[11px] text-rose-400 font-medium">I hate making you sad</p>
+              <p class="text-xs font-black uppercase text-stone-900">Sincerely Yours 🥹😦</p>
+              <p class="text-[10px] text-stone-600">With all my love & apologies</p>
             </div>
           </div>
-          <span class="text-xs text-rose-600 bg-rose-50 px-3 py-1 rounded-full font-bold border border-rose-100">Only for Nehaaa</span>
+          <span class="text-[11px] text-rose-700 bg-rose-100 px-2.5 py-0.5 rounded-full font-bold">For my bebess</span>
         </div>
 
-        <div class="lined-letter p-5 sm:p-7 rounded-2xl border border-rose-100 mt-5 text-gray-700 text-sm sm:text-base font-medium space-y-4 shadow-inner">
-          
-          <p class="font-cute text-2xl text-rose-700 font-bold">Meri pyari Nehaaa,</p>
+        <p class="font-script text-3xl text-rose-600 font-bold mb-2">Meri pyari jaan,</p>
 
-          <p>
-            I’m so deeply sorry about yesterday. Knowing that I’m the reason behind your hurt and silence is the heaviest feeling in the world. Without you talking to me, everything around me feels completely out of place.
-          </p>
+        <p class="mb-3 text-stone-700">
+          I’m so deeply sorry about yesterday. Knowing that I’m the reason behind your hurt and silence is the heaviest feeling in the world. Without you talking to me, everything around me feels completely out of place.
+        </p>
 
-          <p>
-            I’ll be honest with you: sometimes my own insecurities get the better of me. I look at myself and think I’m not handsome enough, successful enough, or good enough for someone as incredible as you, and the fear of losing you terrifies me. But one thing I am absolutely certain of is how deeply I love you—your voice, your eyes, your smile, and your beautiful soul.
-          </p>
+        <p class="mb-3 text-stone-700">
+          I’ll be honest with you: sometimes my own insecurities get the better of me. I look at myself and think I’m not handsome enough, successful enough, or good enough for someone as incredible as you, and the fear of losing you terrifies me. But one thing I am absolutely certain of is how deeply I love you—your voice, your eyes, your smile, and your beautiful soul.
+        </p>
 
-          <p>
-            I promise to be better, to pay attention, and never make you feel ignored again. Just like that boy in the blazer on our page, I’ll never stop running after you with flowers until you feel safe, loved, and happy again. 🌷✨
-          </p>
+        <p class="mb-3 text-stone-700">
+          I promise to be better, to pay attention, and never make you feel ignored again. Just like that boy in the blazer on our page, I’ll never stop running after you with flowers until you feel safe, loved, and happy again. 🌷✨
+        </p>
 
-          <p class="font-bold text-rose-600 bg-rose-50/80 p-3 rounded-2xl border-l-4 border-rose-500 italic">
-            "Come here and let me pull you close against my chest, bury my face in your neck, and kiss away every single trace of yesterday's anger until your breath catches and you remember just how madly, passionately you own every heartbeat of mine. 🔥💋"
-          </p>
+        <!-- Sexy & Passionate Romantic Line Highlight -->
+        <div class="bg-rose-100/90 p-4 rounded-2xl border-l-4 border-rose-500 my-4 text-rose-950 font-serif italic font-bold text-[13px] sm:text-sm leading-relaxed">
+          "Come here and let me pull you close against my chest, bury my face in your neck, and kiss away every single trace of yesterday's anger until your breath catches and you remember just how madly, passionately you own every heartbeat of mine. 🔥💋"
+        </div>
 
-          <div class="pt-4 flex justify-between items-end border-t border-rose-100">
-            <div>
-              <p class="text-xs text-gray-400">Sincerely Yours 🥹😦</p>
-              <p class="font-handwriting text-3xl sm:text-4xl text-rose-600 font-bold">Your babe... 💕</p>
-            </div>
-            <div class="text-4xl animate-bounce">🌹</div>
+        <div class="pt-4 border-t border-rose-200/80 flex items-end justify-between">
+          <div>
+            <p class="text-xs text-stone-700 font-bold">Sincerely Yours 🥹😦</p>
+            <p class="font-script text-3xl text-rose-600 font-bold mt-0.5">Your babe... 💕</p>
           </div>
-
+          <span class="text-3xl animate-bounce">🌹</span>
         </div>
 
       </div>
 
-      <!-- Page navigation buttons -->
-      <div class="flex items-center justify-between w-full max-w-2xl mt-8 px-2">
-        <button onclick="navigateTo('home')" class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-pink-200 text-xs font-bold shadow hover:bg-rose-50 transition">
+      <!-- Quick Nav Buttons -->
+      <div class="flex items-center justify-between w-full mt-4 gap-2">
+        <button onclick="navigateTo('home')" class="w-1/2 py-3 bg-white text-rose-700 border border-rose-200 font-bold text-xs rounded-xl shadow-sm">
           &larr; Back to Home
         </button>
-        <button onclick="navigateTo('reasons')" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white text-xs font-bold shadow-md hover:scale-105 active:scale-95 transition">
+        <button onclick="navigateTo('reasons')" class="w-1/2 py-3 bg-gradient-to-r from-rose-500 to-pink-500 text-white font-bold text-xs rounded-xl shadow-md">
           Why I Love You ❤️ &rarr;
         </button>
       </div>
@@ -444,287 +454,215 @@
     </div>
 
     <!-- ======================================================== -->
-    <!-- PAGE 3: REASONS & MEMORIES PAGE                          -->
+    <!-- SCREEN 3: REASONS FLIP CARDS                             -->
     <!-- ======================================================== -->
-    <div id="page-reasons" class="page-view hidden w-full max-w-4xl flex flex-col items-center">
+    <div id="view-reasons" class="page-screen hidden w-full flex flex-col items-center py-2">
       
-      <div class="text-center max-w-md mx-auto mb-6">
-        <span class="text-xs font-bold uppercase tracking-widest text-rose-600 bg-rose-100 px-3 py-1 rounded-full">Reminders For You</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-800 font-heading mt-2">Why Nehaaa is My World</h2>
-        <p class="text-xs text-gray-500 mt-1">Tap each card to flip and reveal a special reason 💫</p>
+      <div class="text-center mb-3">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-rose-600 bg-rose-100 border border-rose-200 px-3 py-1 rounded-full">Reminders For You</span>
+        <h2 class="text-2xl font-extrabold text-slate-800 font-serif mt-1.5">Why You Are My Entire Universe</h2>
+        <p class="text-xs text-stone-500">Tap cards to flip 💫</p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
         <!-- Card 1 -->
-        <div class="h-44 perspective-card cursor-pointer" onclick="toggleCard(this)">
-          <div class="card-inner relative w-full h-full duration-500 transform-style-3d bg-white rounded-3xl shadow-sm border border-pink-100">
-            <div class="absolute inset-0 backface-hidden flex flex-col items-center justify-center p-4 bg-gradient-to-br from-pink-50 to-rose-100 rounded-3xl text-center">
-              <span class="text-3xl mb-1">✨</span>
-              <h3 class="font-bold text-gray-800 text-sm">Your Bright Smile</h3>
-              <span class="text-[11px] text-rose-500 font-semibold mt-1">Tap to flip ↻</span>
+        <div class="h-40 perspective-card cursor-pointer" onclick="toggleCard(this)">
+          <div class="card-inner relative w-full h-full duration-500 transform-style-3d bg-white/95 rounded-2xl border border-rose-200 shadow-md">
+            <div class="absolute inset-0 backface-hidden flex flex-col items-center justify-center p-4 text-center">
+              <span class="text-2xl mb-1">✨</span>
+              <h3 class="font-bold text-slate-800 text-sm">Your Laugh</h3>
+              <p class="text-xs text-rose-500 mt-0.5">My absolute favorite melody in existence</p>
+              <span class="text-[10px] text-rose-400 mt-2 font-semibold">Tap to flip ↻</span>
             </div>
-            <div class="absolute inset-0 backface-hidden rotate-y-180 flex flex-col items-center justify-center p-4 bg-rose-500 text-white rounded-3xl text-center">
-              <p class="text-xs font-medium leading-relaxed">
-                Your genuine laughter can fix even my hardest day. You light up every room you walk into!
-              </p>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 flex flex-col items-center justify-center p-4 bg-gradient-to-br from-rose-500 to-pink-600 text-white rounded-2xl text-center text-xs">
+              When you laugh without holding back, it instantly erases every worry in my world. You bring sunshine into everything.
             </div>
           </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="h-44 perspective-card cursor-pointer" onclick="toggleCard(this)">
-          <div class="card-inner relative w-full h-full duration-500 transform-style-3d bg-white rounded-3xl shadow-sm border border-pink-100">
-            <div class="absolute inset-0 backface-hidden flex flex-col items-center justify-center p-4 bg-gradient-to-br from-purple-50 to-pink-100 rounded-3xl text-center">
-              <span class="text-3xl mb-1">👑</span>
-              <h3 class="font-bold text-gray-800 text-sm">Your Cute Pouts</h3>
-              <span class="text-[11px] text-purple-600 font-semibold mt-1">Tap to flip ↻</span>
+        <div class="h-40 perspective-card cursor-pointer" onclick="toggleCard(this)">
+          <div class="card-inner relative w-full h-full duration-500 transform-style-3d bg-white/95 rounded-2xl border border-purple-200 shadow-md">
+            <div class="absolute inset-0 backface-hidden flex flex-col items-center justify-center p-4 text-center">
+              <span class="text-2xl mb-1">👑</span>
+              <h3 class="font-bold text-slate-800 text-sm">Your Cute Pouts</h3>
+              <p class="text-xs text-purple-600 mt-0.5">Irresistibly adorable even when angry</p>
+              <span class="text-[10px] text-purple-400 mt-2 font-semibold">Tap to flip ↻</span>
             </div>
-            <div class="absolute inset-0 backface-hidden rotate-y-180 flex flex-col items-center justify-center p-4 bg-purple-600 text-white rounded-3xl text-center">
-              <p class="text-xs font-medium leading-relaxed">
-                Even when you cross your arms and frown like the cartoon girl, you are still the most gorgeous girl on earth.
-              </p>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 flex flex-col items-center justify-center p-4 bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-2xl text-center text-xs">
+              Even with crossed arms and puffed cheeks, you are breathtaking. All I ever want is to hug you and make you smile.
             </div>
           </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="h-44 perspective-card cursor-pointer" onclick="toggleCard(this)">
-          <div class="card-inner relative w-full h-full duration-500 transform-style-3d bg-white rounded-3xl shadow-sm border border-pink-100">
-            <div class="absolute inset-0 backface-hidden flex flex-col items-center justify-center p-4 bg-gradient-to-br from-pink-50 to-rose-100 rounded-3xl text-center">
-              <span class="text-3xl mb-1">🤍</span>
-              <h3 class="font-bold text-gray-800 text-sm">Your Soft Heart</h3>
-              <span class="text-[11px] text-rose-500 font-semibold mt-1">Tap to flip ↻</span>
+        <div class="h-40 perspective-card cursor-pointer" onclick="toggleCard(this)">
+          <div class="card-inner relative w-full h-full duration-500 transform-style-3d bg-white/95 rounded-2xl border border-rose-200 shadow-md">
+            <div class="absolute inset-0 backface-hidden flex flex-col items-center justify-center p-4 text-center">
+              <span class="text-2xl mb-1">🤍</span>
+              <h3 class="font-bold text-slate-800 text-sm">Your Soft Heart</h3>
+              <p class="text-xs text-rose-500 mt-0.5">The purest soul I've ever known</p>
+              <span class="text-[10px] text-rose-400 mt-2 font-semibold">Tap to flip ↻</span>
             </div>
-            <div class="absolute inset-0 backface-hidden rotate-y-180 flex flex-col items-center justify-center p-4 bg-rose-500 text-white rounded-3xl text-center">
-              <p class="text-xs font-medium leading-relaxed">
-                The care, warmth, and purity you hold in your heart inspires me to be a better man every day.
-              </p>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 flex flex-col items-center justify-center p-4 bg-gradient-to-br from-rose-500 to-pink-600 text-white rounded-2xl text-center text-xs">
+              Your tenderness and kindness inspire me daily. I promise to always protect that pure soft heart of yours.
             </div>
           </div>
         </div>
 
         <!-- Card 4 -->
-        <div class="h-44 perspective-card cursor-pointer" onclick="toggleCard(this)">
-          <div class="card-inner relative w-full h-full duration-500 transform-style-3d bg-white rounded-3xl shadow-sm border border-pink-100">
-            <div class="absolute inset-0 backface-hidden flex flex-col items-center justify-center p-4 bg-gradient-to-br from-pink-50 to-rose-100 rounded-3xl text-center">
-              <span class="text-3xl mb-1">☕</span>
-              <h3 class="font-bold text-gray-800 text-sm">Our Late Night Talks</h3>
-              <span class="text-[11px] text-rose-500 font-semibold mt-1">Tap to flip ↻</span>
+        <div class="h-40 perspective-card cursor-pointer" onclick="toggleCard(this)">
+          <div class="card-inner relative w-full h-full duration-500 transform-style-3d bg-white/95 rounded-2xl border border-pink-200 shadow-md">
+            <div class="absolute inset-0 backface-hidden flex flex-col items-center justify-center p-4 text-center">
+              <span class="text-2xl mb-1">🧸</span>
+              <h3 class="font-bold text-slate-800 text-sm">My Safest Haven</h3>
+              <p class="text-xs text-pink-600 mt-0.5">Where I can truly be myself</p>
+              <span class="text-[10px] text-pink-400 mt-2 font-semibold">Tap to flip ↻</span>
             </div>
-            <div class="absolute inset-0 backface-hidden rotate-y-180 flex flex-col items-center justify-center p-4 bg-rose-500 text-white rounded-3xl text-center">
-              <p class="text-xs font-medium leading-relaxed">
-                Sharing silly gossip, random memes, and hearing your soft voice at night is my greatest addiction.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="h-44 perspective-card cursor-pointer" onclick="toggleCard(this)">
-          <div class="card-inner relative w-full h-full duration-500 transform-style-3d bg-white rounded-3xl shadow-sm border border-pink-100">
-            <div class="absolute inset-0 backface-hidden flex flex-col items-center justify-center p-4 bg-gradient-to-br from-purple-50 to-pink-100 rounded-3xl text-center">
-              <span class="text-3xl mb-1">🧸</span>
-              <h3 class="font-bold text-gray-800 text-sm">My Safest Haven</h3>
-              <span class="text-[11px] text-purple-600 font-semibold mt-1">Tap to flip ↻</span>
-            </div>
-            <div class="absolute inset-0 backface-hidden rotate-y-180 flex flex-col items-center justify-center p-4 bg-purple-600 text-white rounded-3xl text-center">
-              <p class="text-xs font-medium leading-relaxed">
-                With you, I don't need any armor. You make me feel accepted, loved, and complete.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="h-44 perspective-card cursor-pointer" onclick="toggleCard(this)">
-          <div class="card-inner relative w-full h-full duration-500 transform-style-3d bg-white rounded-3xl shadow-sm border border-pink-100">
-            <div class="absolute inset-0 backface-hidden flex flex-col items-center justify-center p-4 bg-gradient-to-br from-pink-50 to-rose-100 rounded-3xl text-center">
-              <span class="text-3xl mb-1">💍</span>
-              <h3 class="font-bold text-gray-800 text-sm">Only You, Forever</h3>
-              <span class="text-[11px] text-rose-500 font-semibold mt-1">Tap to flip ↻</span>
-            </div>
-            <div class="absolute inset-0 backface-hidden rotate-y-180 flex flex-col items-center justify-center p-4 bg-rose-500 text-white rounded-3xl text-center">
-              <p class="text-xs font-medium leading-relaxed">
-                Disagreements happen, but my love for you is unconditional and forever. I choose you every single day.
-              </p>
+            <div class="absolute inset-0 backface-hidden rotate-y-180 flex flex-col items-center justify-center p-4 bg-gradient-to-br from-pink-500 to-rose-600 text-white rounded-2xl text-center text-xs">
+              With you, I don't have to pretend. You make me feel accepted, loved, and safe from everything outside.
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Navigation Footer -->
-      <div class="flex items-center justify-between w-full max-w-4xl mt-8 px-2">
-        <button onclick="navigateTo('letter')" class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-pink-200 text-xs font-bold shadow hover:bg-rose-50 transition">
+      <!-- Quick Nav Buttons -->
+      <div class="flex items-center justify-between w-full mt-4 gap-2">
+        <button onclick="navigateTo('letter')" class="w-1/2 py-3 bg-white text-rose-700 border border-rose-200 font-bold text-xs rounded-xl shadow-sm">
           &larr; The Letter
         </button>
-        <button onclick="navigateTo('forgive')" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white text-xs font-bold shadow-md hover:scale-105 active:scale-95 transition">
-          Check Your Mood Meter 🥺 &rarr;
+        <button onclick="navigateTo('forgive')" class="w-1/2 py-3 bg-gradient-to-r from-rose-500 to-pink-500 text-white font-bold text-xs rounded-xl shadow-md">
+          Forgive Me? 🥺 &rarr;
         </button>
       </div>
 
     </div>
 
     <!-- ======================================================== -->
-    <!-- PAGE 4: FORGIVENESS & MOOD METER PAGE                    -->
+    <!-- SCREEN 4: FORGIVE ME? (Dodging Button Game)              -->
     <!-- ======================================================== -->
-    <div id="page-forgive" class="page-view hidden w-full max-w-xl flex flex-col items-center">
+    <div id="view-forgive" class="page-screen hidden w-full flex flex-col items-center py-2">
       
-      <div class="text-center mb-4">
-        <span class="text-xs font-bold uppercase tracking-widest text-rose-600 bg-rose-100 px-3 py-1 rounded-full">The Big Question</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-800 font-heading mt-2">Maan jaao na Nehaaa? 🥺</h2>
-        <p class="text-xs text-gray-500 mt-1">Choose carefully! 👉👈</p>
+      <div class="text-center mb-3">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-rose-600 bg-rose-100 border border-rose-200 px-3 py-1 rounded-full">The Big Question</span>
+        <h2 class="text-2xl font-extrabold text-slate-800 font-serif mt-1">Maan jaao na my bebess? 🥺</h2>
+        <p class="text-xs text-stone-500">Pick carefully! 👉👈</p>
       </div>
 
-      <div class="w-full bg-white/90 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-xl border border-rose-200 text-center relative overflow-hidden min-h-[340px] flex flex-col justify-center items-center">
+      <div class="w-full bg-white/95 backdrop-blur-md rounded-3xl p-6 shadow-xl border border-rose-200 text-center relative overflow-hidden min-h-[300px] flex flex-col justify-center items-center">
         
-        <div id="forgive-icon" class="text-6xl mb-3 transition-transform duration-300">
+        <div id="forgiveEmoji" class="text-5xl mb-2 transition-transform duration-300">
           🥺
         </div>
 
-        <h3 id="forgive-heading" class="text-lg sm:text-xl font-bold text-gray-800 mb-1">
-          Are we good again, <span class="text-rose-600">janeman</span>?
+        <h3 id="forgiveHeading" class="text-base sm:text-lg font-bold text-slate-800 mb-1">
+          Are we good again, <span class="text-rose-500 italic">janeman</span>?
         </h3>
         
-        <p id="forgive-subtext" class="text-xs text-gray-500 mb-6 max-w-sm">
-          I promise to never repeat what happened yesterday and make you smile non-stop!
+        <p id="forgiveSub" class="text-xs text-stone-600 mb-5 max-w-xs">
+          I promise to never repeat what happened yesterday and keep you smiling forever!
         </p>
 
-        <!-- Decision Buttons Area -->
-        <div id="decision-zone" class="relative w-full h-24 flex items-center justify-center gap-4">
-          
-          <button id="btn-forgive" onclick="handleForgiveness()" class="px-7 sm:px-9 py-3.5 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-extrabold text-sm sm:text-base rounded-full shadow-lg shadow-emerald-200 hover:scale-105 active:scale-95 transition-all z-20">
+        <!-- Decision Buttons -->
+        <div id="decisionContainer" class="relative w-full h-20 flex items-center justify-center gap-3">
+          <button id="btnYes" onclick="celebrateForgiveness()" class="px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 text-white font-bold text-sm rounded-full shadow-lg hover:scale-105 active:scale-95 transition z-20">
             Yes, Maan Gayi! 🥰❤️
           </button>
 
-          <button id="btn-mad" onmouseover="evadeMadButton()" onclick="evadeMadButton()" class="px-5 py-3.5 bg-rose-100 text-rose-700 font-bold text-xs sm:text-sm rounded-full transition-all duration-200 border border-rose-300 shadow-sm z-10 whitespace-nowrap">
+          <button id="btnMad" onmouseover="dodgeButton()" onclick="dodgeButton()" class="px-4 py-3 bg-rose-100 text-rose-700 font-bold text-xs rounded-full border border-rose-200 shadow-sm z-10 whitespace-nowrap transition-transform duration-200">
             Still Mad! 😤
           </button>
-
         </div>
 
-        <div id="bribe-box" class="hidden mt-3 text-xs font-bold text-amber-700 bg-amber-50 px-4 py-2.5 rounded-2xl border border-amber-200">
-          💡 Sweet Bribe: Unlimited treats, favorite food delivery & 100 tight cuddles right now! 🍦🍫
+        <div id="bribeNotice" class="hidden mt-3 text-xs font-bold text-amber-800 bg-amber-50 px-3 py-2 rounded-xl border border-amber-200">
+          💡 Sweet Bribe: Unlimited ice cream & 100 tight hugs right now! 🍨🍫
         </div>
 
-        <div id="celebration-box" class="hidden flex-col items-center space-y-3 mt-2">
-          <div class="text-5xl animate-bounce">🎉💐👩‍❤️‍👨</div>
-          <p class="font-heading text-2xl sm:text-3xl text-rose-600 font-extrabold">THANK YOU MERI JAAN!</p>
-          <p class="text-xs sm:text-sm text-gray-600 max-w-sm">
-            I love you so much Nehaaa! Tap below to collect your exclusive peace vouchers.
+        <!-- Celebration Box -->
+        <div id="celebrationNotice" class="hidden flex-col items-center space-y-2 mt-2">
+          <div class="text-4xl animate-bounce">🎉💐👩‍❤️‍👨</div>
+          <p class="font-serif text-xl sm:text-2xl text-rose-600 font-extrabold">THANK YOU MY BEBESS!</p>
+          <p class="text-xs text-stone-600 max-w-xs">
+            I love you so much! Tap below to collect your peace offering passes.
           </p>
-          <button onclick="navigateTo('coupons')" class="mt-2 px-6 py-2.5 bg-gradient-to-r from-rose-500 to-pink-500 text-white text-xs font-bold rounded-full shadow hover:scale-105 transition">
-            Go to Coupons 🎟️
+          <button onclick="navigateTo('coupons')" class="mt-2 px-6 py-2.5 bg-gradient-to-r from-rose-500 to-pink-500 text-white text-xs font-bold rounded-full shadow-md">
+            Claim Your Passes 🎟️
           </button>
         </div>
 
       </div>
 
-      <div class="flex items-center justify-between w-full max-w-xl mt-8 px-2">
-        <button onclick="navigateTo('reasons')" class="px-5 py-2.5 rounded-full bg-white text-gray-700 border border-pink-200 text-xs font-bold shadow hover:bg-rose-50 transition">
+      <!-- Quick Nav Buttons -->
+      <div class="flex items-center justify-between w-full mt-4 gap-2">
+        <button onclick="navigateTo('reasons')" class="w-1/2 py-3 bg-white text-rose-700 border border-rose-200 font-bold text-xs rounded-xl shadow-sm">
           &larr; Why I Love You
         </button>
-        <button onclick="navigateTo('coupons')" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white text-xs font-bold shadow-md hover:scale-105 active:scale-95 transition">
-          Your Coupons 🎟️ &rarr;
+        <button onclick="navigateTo('coupons')" class="w-1/2 py-3 bg-gradient-to-r from-rose-500 to-pink-500 text-white font-bold text-xs rounded-xl shadow-md">
+          Coupons 🎟️ &rarr;
         </button>
       </div>
 
     </div>
 
     <!-- ======================================================== -->
-    <!-- PAGE 5: PEACE OFFERING COUPONS PAGE                     -->
+    <!-- SCREEN 5: PEACE OFFERING VOUCHERS                        -->
     <!-- ======================================================== -->
-    <div id="page-coupons" class="page-view hidden w-full max-w-3xl flex flex-col items-center">
+    <div id="view-coupons" class="page-screen hidden w-full flex flex-col items-center py-2">
       
-      <div class="text-center mb-6">
-        <span class="text-xs font-bold uppercase tracking-widest text-rose-600 bg-rose-100 px-3 py-1 rounded-full">Exclusive For Nehaaa</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-800 font-heading mt-2">Peace Offering Vouchers</h2>
-        <p class="text-xs text-gray-500 mt-1">Valid anytime with zero expiration date! Tap to claim ❤️</p>
+      <div class="text-center mb-3">
+        <span class="text-[11px] font-bold uppercase tracking-widest text-rose-600 bg-rose-100 border border-rose-200 px-3 py-1 rounded-full">Exclusive Passes</span>
+        <h2 class="text-2xl font-extrabold text-slate-800 font-serif mt-1">Peace Offering Vouchers</h2>
+        <p class="text-xs text-stone-500">Zero expiration date! Tap to claim ❤️</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-        <!-- Voucher 1 -->
-        <div class="bg-white rounded-3xl p-5 border-2 border-dashed border-rose-300 shadow-sm flex flex-col justify-between">
-          <div class="flex items-start justify-between">
-            <div>
-              <span class="text-[10px] font-extrabold uppercase tracking-widest text-rose-500">Nehaaa Pass #01</span>
-              <h3 class="text-base font-bold text-gray-800 mt-0.5">Snacks & Favorite Food Craving 🍧</h3>
-              <p class="text-xs text-gray-500 mt-1">Whatever you crave, ordered or brought to you immediately.</p>
-            </div>
-            <span class="text-3xl">🧋</span>
+      <div class="flex flex-col gap-3 w-full">
+        <!-- Pass 1 -->
+        <div class="bg-white/95 rounded-2xl p-4 border-2 border-dashed border-rose-300 shadow-sm flex items-center justify-between">
+          <div class="pr-2">
+            <span class="text-[9px] font-extrabold uppercase text-rose-500">Pass #01</span>
+            <h3 class="text-sm font-bold text-slate-800">Snacks & Food Craving 🍨</h3>
+            <p class="text-xs text-stone-500">Whatever you crave, delivered immediately.</p>
           </div>
-          <div class="mt-4 pt-3 border-t border-rose-100 flex items-center justify-between">
-            <span class="text-[11px] font-semibold text-rose-400">Unlimited uses</span>
-            <button onclick="claimVoucher(this)" class="px-4 py-1.5 bg-rose-500 hover:bg-rose-600 text-white text-xs font-bold rounded-full transition shadow">
-              Redeem
-            </button>
-          </div>
+          <button onclick="claimPass(this)" class="px-3.5 py-1.5 bg-rose-500 text-white text-xs font-bold rounded-full whitespace-nowrap shadow-sm">
+            Redeem
+          </button>
         </div>
 
-        <!-- Voucher 2 -->
-        <div class="bg-white rounded-3xl p-5 border-2 border-dashed border-purple-300 shadow-sm flex flex-col justify-between">
-          <div class="flex items-start justify-between">
-            <div>
-              <span class="text-[10px] font-extrabold uppercase tracking-widest text-purple-600">Nehaaa Pass #02</span>
-              <h3 class="text-base font-bold text-gray-800 mt-0.5">Tightest Hugs & Forehead Kisses 🧸</h3>
-              <p class="text-xs text-gray-500 mt-1">Warm cuddles until every bit of stress disappears completely.</p>
-            </div>
-            <span class="text-3xl">🫂</span>
+        <!-- Pass 2 -->
+        <div class="bg-white/95 rounded-2xl p-4 border-2 border-dashed border-purple-300 shadow-sm flex items-center justify-between">
+          <div class="pr-2">
+            <span class="text-[9px] font-extrabold uppercase text-purple-600">Pass #02</span>
+            <h3 class="text-sm font-bold text-slate-800">Tightest Hugs & Forehead Kisses 🧸</h3>
+            <p class="text-xs text-stone-500">Warm cuddles until all your stress vanishes.</p>
           </div>
-          <div class="mt-4 pt-3 border-t border-purple-100 flex items-center justify-between">
-            <span class="text-[11px] font-semibold text-purple-500">100% Guaranteed</span>
-            <button onclick="claimVoucher(this)" class="px-4 py-1.5 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold rounded-full transition shadow">
-              Redeem
-            </button>
-          </div>
+          <button onclick="claimPass(this)" class="px-3.5 py-1.5 bg-purple-600 text-white text-xs font-bold rounded-full whitespace-nowrap shadow-sm">
+            Redeem
+          </button>
         </div>
 
-        <!-- Voucher 3 -->
-        <div class="bg-white rounded-3xl p-5 border-2 border-dashed border-rose-300 shadow-sm flex flex-col justify-between">
-          <div class="flex items-start justify-between">
-            <div>
-              <span class="text-[10px] font-extrabold uppercase tracking-widest text-rose-500">Nehaaa Pass #03</span>
-              <h3 class="text-base font-bold text-gray-800 mt-0.5">"Nehaaa Is Always Right" Golden Card 🏆</h3>
-              <p class="text-xs text-gray-500 mt-1">Play this card anytime: you automatically win with no arguments!</p>
-            </div>
-            <span class="text-3xl">👑</span>
+        <!-- Pass 3 -->
+        <div class="bg-white/95 rounded-2xl p-4 border-2 border-dashed border-rose-300 shadow-sm flex items-center justify-between">
+          <div class="pr-2">
+            <span class="text-[9px] font-extrabold uppercase text-rose-500">Pass #03</span>
+            <h3 class="text-sm font-bold text-slate-800">"My Bebess Is Always Right" 🏆</h3>
+            <p class="text-xs text-stone-500">Play this card anytime: you automatically win!</p>
           </div>
-          <div class="mt-4 pt-3 border-t border-rose-100 flex items-center justify-between">
-            <span class="text-[11px] font-semibold text-rose-400">Valid forever</span>
-            <button onclick="claimVoucher(this)" class="px-4 py-1.5 bg-rose-500 hover:bg-rose-600 text-white text-xs font-bold rounded-full transition shadow">
-              Redeem
-            </button>
-          </div>
-        </div>
-
-        <!-- Voucher 4 -->
-        <div class="bg-white rounded-3xl p-5 border-2 border-dashed border-purple-300 shadow-sm flex flex-col justify-between">
-          <div class="flex items-start justify-between">
-            <div>
-              <span class="text-[10px] font-extrabold uppercase tracking-widest text-purple-600">Nehaaa Pass #04</span>
-              <h3 class="text-base font-bold text-gray-800 mt-0.5">Special Romantic Date Night 🍽️</h3>
-              <p class="text-xs text-gray-500 mt-1">Pick where you want to go, dress up cute, and I will take care of everything.</p>
-            </div>
-            <span class="text-3xl">🌹</span>
-          </div>
-          <div class="mt-4 pt-3 border-t border-purple-100 flex items-center justify-between">
-            <span class="text-[11px] font-semibold text-purple-500">My treat always</span>
-            <button onclick="claimVoucher(this)" class="px-4 py-1.5 bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold rounded-full transition shadow">
-              Redeem
-            </button>
-          </div>
+          <button onclick="claimPass(this)" class="px-3.5 py-1.5 bg-rose-500 text-white text-xs font-bold rounded-full whitespace-nowrap shadow-sm">
+            Redeem
+          </button>
         </div>
       </div>
 
-      <!-- Instant WhatsApp Message -->
-      <div class="mt-6 text-center bg-white/80 p-5 rounded-3xl border border-pink-100 max-w-md w-full shadow-md">
-        <p class="text-xs text-gray-700 font-bold mb-2">Ready to talk to me, janeman?</p>
-        <button onclick="sendWhatsAppNotice()" class="w-full py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm rounded-full shadow-md transition flex items-center justify-center space-x-2">
-          <span>💬 Send "Maan gayi baba, I forgive you ❤️" on WhatsApp</span>
+      <!-- Direct WhatsApp Action -->
+      <div class="mt-4 text-center bg-white/95 p-4 rounded-2xl border border-rose-200 w-full shadow-md">
+        <p class="text-xs text-stone-700 font-bold mb-2">Ready to talk to me, janeman?</p>
+        <button onclick="openWhatsApp()" class="w-full py-3 bg-emerald-600 text-white font-bold text-xs rounded-xl shadow-md flex items-center justify-center space-x-1.5">
+          <span>💬 Send "Maan gayi baba, I forgive you ❤️"</span>
         </button>
       </div>
 
-      <div class="flex items-center justify-center w-full mt-6">
-        <button onclick="navigateTo('home')" class="px-6 py-2.5 rounded-full bg-white text-gray-700 border border-pink-200 text-xs font-bold shadow hover:bg-rose-50 transition">
+      <div class="w-full mt-3">
+        <button onclick="navigateTo('home')" class="w-full py-2.5 bg-white text-rose-700 border border-rose-200 font-bold text-xs rounded-xl shadow-sm">
           &larr; Back to Home Screen
         </button>
       </div>
@@ -733,37 +671,35 @@
 
   </main>
 
-  <!-- Global Romantic Footer -->
-  <footer class="relative z-20 py-5 text-center text-xs text-gray-500 border-t border-pink-200/60 bg-white/50 backdrop-blur-sm mt-12">
-    <p>Created with endless love, roses 🌹 & promises • Just for <span class="font-bold text-rose-600">Nehaaa</span></p>
+  <!-- MOBILE FOOTER -->
+  <footer class="relative z-10 py-3 text-center text-[11px] text-rose-400 bg-white/40 border-t border-rose-200">
+    Just for <span class="font-bold text-rose-500">my bebess</span> • Endless love & roses 🌹
   </footer>
 
-  <!-- ======================================================== -->
-  <!-- MODAL: GITHUB PAGES DEPLOYMENT GUIDE (Simple 2 Min)     -->
-  <!-- ======================================================== -->
-  <div id="githubModal" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl p-6 sm:p-7 max-w-md w-full shadow-2xl border border-pink-200 relative max-h-[90vh] overflow-y-auto">
-      <button onclick="toggleModal('githubModal')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 text-xl font-bold">×</button>
+  <!-- DEPLOYMENT GUIDE MODAL -->
+  <div id="deployGuideModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-5 max-w-sm w-full shadow-2xl relative text-slate-800 text-xs">
+      <button onclick="toggleModal('deployGuideModal')" class="absolute top-3 right-4 text-stone-400 hover:text-stone-700 text-xl font-bold">×</button>
       
       <div class="flex items-center space-x-2 mb-2">
-        <span class="text-2xl">🚀</span>
-        <h3 class="text-lg font-bold text-gray-800 font-heading">Host on GitHub Pages (2 Mins)</h3>
+        <span class="text-xl">🚀</span>
+        <h3 class="text-base font-bold text-slate-800 font-serif">Host on GitHub Pages (2 Mins)</h3>
       </div>
       
-      <p class="text-xs text-gray-600 mb-3 leading-relaxed">
-        Send this exact website to Nehaaa as a live URL link:
+      <p class="text-stone-600 mb-2 leading-relaxed">
+        Send this live website directly to your girlfriend:
       </p>
 
-      <ol class="text-xs text-gray-700 space-y-2 list-decimal pl-4">
-        <li>Log into <a href="https://github.com" target="_blank" class="text-rose-600 underline font-bold">GitHub.com</a> and click <strong>New Repository</strong>.</li>
-        <li>Name it <code class="bg-rose-50 text-rose-600 px-1 py-0.5 rounded font-mono">sorry-nehaaa</code> and set it to <strong>Public</strong>.</li>
-        <li>Click <strong>Upload files</strong> and upload this file named as <strong><code class="bg-rose-50 text-rose-600 px-1 py-0.5 rounded font-mono">index.html</code></strong>. Commit changes.</li>
-        <li>Go to <strong>Settings</strong> &rarr; <strong>Pages</strong> (on left sidebar).</li>
-        <li>Under <strong>Branch</strong>, choose <code>main</code> (or <code>master</code>) and <code>/(root)</code>, then click <strong>Save</strong>.</li>
-        <li>Wait 1 minute, and your site is live at: <br><code class="text-rose-600 font-bold text-[11px]">https://your-username.github.io/sorry-nehaaa/</code></li>
+      <ol class="space-y-1.5 list-decimal pl-4 text-stone-600">
+        <li>Log into <a href="https://github.com" target="_blank" class="text-rose-600 font-bold underline">GitHub.com</a> & create a <strong>New Repository</strong>.</li>
+        <li>Name it <code class="bg-rose-50 text-rose-600 px-1 py-0.5 rounded font-mono">for-my-bebess</code> (set to <strong>Public</strong>).</li>
+        <li>Upload this file as <strong><code class="bg-rose-50 text-rose-600 px-1 py-0.5 rounded font-mono">index.html</code></strong> and commit.</li>
+        <li>Go to <strong>Settings</strong> &rarr; <strong>Pages</strong>.</li>
+        <li>Set Branch to <code>main</code> (or <code>master</code>) & <code>/(root)</code>, then click <strong>Save</strong>.</li>
+        <li>Your site is live within 60 seconds!</li>
       </ol>
 
-      <button onclick="toggleModal('githubModal')" class="mt-5 w-full py-2.5 bg-rose-500 hover:bg-rose-600 text-white font-bold rounded-full text-xs">
+      <button onclick="toggleModal('deployGuideModal')" class="mt-4 w-full py-2.5 bg-rose-500 text-white font-bold rounded-xl text-xs">
         Got it! Ready to make her smile ❤️
       </button>
     </div>
@@ -771,41 +707,36 @@
 
   <!-- JAVASCRIPT LOGIC -->
   <script>
-    // Multi-Page Router for GitHub Pages
-    const pages = ['home', 'letter', 'reasons', 'forgive', 'coupons'];
+    // Tab / Page Router
+    const views = ['home', 'letter', 'reasons', 'forgive', 'coupons'];
 
-    function navigateTo(pageId) {
-      if (!pages.includes(pageId)) pageId = 'home';
+    function navigateTo(viewId) {
+      if (!views.includes(viewId)) viewId = 'home';
+      window.location.hash = viewId;
 
-      // Update URL Hash without page reload
-      window.location.hash = pageId;
-
-      // Toggle views
-      pages.forEach(p => {
-        const el = document.getElementById(`page-${p}`);
-        const btn = document.getElementById(`nav-${p}`);
-        if (el) {
-          if (p === pageId) {
-            el.classList.remove('hidden');
+      views.forEach(v => {
+        const screen = document.getElementById(`view-${v}`);
+        const tab = document.getElementById(`nav-${v}`);
+        if (screen) {
+          if (v === viewId) {
+            screen.classList.remove('hidden');
           } else {
-            el.classList.add('hidden');
+            screen.classList.add('hidden');
           }
         }
-        if (btn) {
-          if (p === pageId) {
-            btn.className = "nav-btn px-2.5 sm:px-3.5 py-1.5 rounded-full text-xs font-extrabold transition-all duration-200 flex items-center gap-1 text-rose-600 bg-rose-100 shadow-sm";
+        if (tab) {
+          if (v === viewId) {
+            tab.className = "nav-tab px-3 py-1.5 rounded-full text-xs font-bold transition flex items-center gap-1 bg-gradient-to-r from-rose-500 to-pink-500 text-white shadow-sm shadow-rose-300";
           } else {
-            btn.className = "nav-btn px-2.5 sm:px-3.5 py-1.5 rounded-full text-xs font-extrabold transition-all duration-200 flex items-center gap-1 text-gray-600 hover:text-rose-600 hover:bg-rose-50";
+            tab.className = "nav-tab px-2.5 py-1.5 rounded-full text-xs font-bold text-rose-800 hover:text-rose-600 transition flex items-center gap-1";
           }
         }
       });
 
-      // Smooth scroll back to top of page
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      playChimeNote(480);
+      playChime(480);
     }
 
-    // Sync on initial load and browser back/forward buttons
     window.addEventListener('load', () => {
       const hash = window.location.hash.replace('#', '');
       navigateTo(hash || 'home');
@@ -816,243 +747,206 @@
       navigateTo(hash || 'home');
     });
 
-    // Character Conversation Dialogues (Bilingual & Cute)
-    const boyDialogues = [
+    // Interactive Characters Poke Dialogue
+    const boyLines = [
       "Janeman ruko toh sahi! I got your roses! 🥺🌹",
-      "Suno na Nehaaa.. itna gussa mat karo na please! 🌸",
+      "Suno na bebess.. itna gussa mat karo na please! 🌸",
       "Kuch le de ke maan jaao na baba... 👉👈",
       "Ice cream khilaunga, pakka promise! 🍨",
       "Look at me just once please baby! ❤️"
     ];
 
-    const girlDialogues = [
-      "Hmph! Baat nahi karni mujhe! 😤❌",
+    const girlLines = [
+      "Hmph! Baat nahi karni! 😤",
       "Flowers se kya hoga? I'm still mad! 🥀",
       "Kal itna kyu pareshan kiya tha phir? 🥺",
       "Ice cream ke saath chocolates bhi chahiye! 🍫",
       "Fine... but roses smell really good though 🙈🌸"
     ];
 
-    let pokeIdx = 0;
+    let pokeCount = 0;
     function pokeCharacters() {
-      pokeIdx = (pokeIdx + 1) % boyDialogues.length;
-      const bBubble = document.getElementById('boy-speech-bubble');
-      const gBubble = document.getElementById('girl-speech-bubble');
+      pokeCount = (pokeCount + 1) % boyLines.length;
+      const bBubble = document.getElementById('boyBubble');
+      const gBubble = document.getElementById('girlBubble');
 
       if (bBubble && gBubble) {
-        bBubble.innerHTML = `${boyDialogues[pokeIdx]} <div class="absolute left-1/2 -bottom-1.5 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-blue-100"></div>`;
-        gBubble.innerHTML = `${girlDialogues[pokeIdx]} <div class="absolute left-1/2 -bottom-1.5 transform -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-rose-200"></div>`;
+        bBubble.innerHTML = `${boyLines[pokeCount]} <div class="absolute left-1/2 -bottom-1 transform -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-white"></div>`;
+        gBubble.innerHTML = `${girlLines[pokeCount]} <div class="absolute left-1/2 -bottom-1 transform -translate-x-1/2 w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] border-t-white"></div>`;
       }
-      playChimeNote(430 + pokeIdx * 30);
+      playChime(420 + pokeCount * 30);
     }
 
-    // 3D Card Flip
-    function toggleCard(cardElement) {
-      const inner = cardElement.querySelector('.card-inner');
+    // Flip Card
+    function toggleCard(card) {
+      const inner = card.querySelector('.card-inner');
       inner.classList.toggle('rotate-y-180');
-      playChimeNote(523.25);
+      playChime(523.25);
     }
 
-    // Playful dodging "Still Mad" button
-    let dodgeCount = 0;
-    function evadeMadButton() {
-      dodgeCount++;
-      const madBtn = document.getElementById('btn-mad');
-      const icon = document.getElementById('forgive-icon');
-      const bribe = document.getElementById('bribe-box');
+    // Dodging Mad Button
+    let dodges = 0;
+    function dodgeButton() {
+      dodges++;
+      const btn = document.getElementById('btnMad');
+      const notice = document.getElementById('bribeNotice');
+      const emoji = document.getElementById('forgiveEmoji');
 
-      const randX = (Math.random() - 0.5) * 220;
-      const randY = (Math.random() - 0.5) * 85;
+      const randX = (Math.random() - 0.5) * 160;
+      const randY = (Math.random() - 0.5) * 60;
 
-      madBtn.style.transform = `translate(${randX}px, ${randY}px) scale(${Math.max(0.65, 1 - dodgeCount * 0.08)})`;
+      btn.style.transform = `translate(${randX}px, ${randY}px) scale(${Math.max(0.7, 1 - dodges * 0.08)})`;
 
-      if (bribe) bribe.classList.remove('hidden');
+      if (notice) notice.classList.remove('hidden');
 
-      if (dodgeCount === 1) {
-        icon.textContent = "🥺";
-      } else if (dodgeCount === 2) {
-        icon.textContent = "😿";
-        madBtn.textContent = "Abhi bhi gussa? 🥺";
-      } else if (dodgeCount >= 3) {
-        icon.textContent = "💔";
-        madBtn.textContent = "Pakad ke dikhao! 🙈";
+      if (dodges === 1) {
+        emoji.textContent = "🥺";
+      } else if (dodges === 2) {
+        emoji.textContent = "😿";
+        btn.textContent = "Abhi bhi gussa? 🥺";
+      } else if (dodges >= 3) {
+        emoji.textContent = "💔";
+        btn.textContent = "Pakad ke dikhao! 🙈";
       }
-      playChimeNote(300);
+      playChime(320);
     }
 
-    // Forgiveness Celebration
-    function handleForgiveness() {
+    // Celebration Confetti
+    function celebrateForgiveness() {
       confetti({
-        particleCount: 150,
-        spread: 90,
+        particleCount: 140,
+        spread: 80,
         origin: { y: 0.6 },
-        colors: ['#f43f5e', '#ec4899', '#fcd34d', '#34d399', '#a855f7']
+        colors: ['#ff4d79', '#ec4899', '#fcd34d', '#34d399', '#a855f7']
       });
 
-      setTimeout(() => {
-        confetti({
-          particleCount: 80,
-          angle: 60,
-          spread: 55,
-          origin: { x: 0 },
-          colors: ['#f43f5e', '#38bdf8', '#fbbf24']
-        });
-        confetti({
-          particleCount: 80,
-          angle: 120,
-          spread: 55,
-          origin: { x: 1 },
-          colors: ['#f43f5e', '#38bdf8', '#fbbf24']
-        });
-      }, 300);
+      document.getElementById('decisionContainer').classList.add('hidden');
+      document.getElementById('bribeNotice').classList.add('hidden');
+      document.getElementById('forgiveHeading').classList.add('hidden');
+      document.getElementById('forgiveSub').classList.add('hidden');
+      document.getElementById('forgiveEmoji').textContent = "🥰";
+      document.getElementById('celebrationNotice').classList.remove('hidden');
 
-      document.getElementById('decision-zone').classList.add('hidden');
-      document.getElementById('bribe-box').classList.add('hidden');
-      document.getElementById('forgive-heading').classList.add('hidden');
-      document.getElementById('forgive-subtext').classList.add('hidden');
-      document.getElementById('forgive-icon').textContent = "🥰";
-      document.getElementById('celebration-box').classList.remove('hidden');
-
-      playCelebrationArpeggio();
+      playChime(523.25);
+      setTimeout(() => playChime(659.25), 120);
+      setTimeout(() => playChime(783.99), 240);
     }
 
-    // Claim Voucher
-    function claimVoucher(btn) {
+    // Claim Voucher Pass
+    function claimPass(btn) {
       btn.textContent = "Claimed! 💖";
-      btn.classList.remove('bg-rose-500', 'bg-purple-600', 'hover:bg-rose-600', 'hover:bg-purple-700');
-      btn.classList.add('bg-emerald-500', 'hover:bg-emerald-600');
+      btn.className = "px-3.5 py-1.5 bg-emerald-600 text-white text-xs font-bold rounded-full whitespace-nowrap shadow-sm";
       btn.disabled = true;
 
       confetti({
         particleCount: 45,
-        spread: 60,
+        spread: 50,
         origin: { y: 0.7 }
       });
-
-      playChimeNote(659.25);
+      playChime(659.25);
     }
 
-    // WhatsApp Direct Send
-    function sendWhatsAppNotice() {
+    // WhatsApp Direct Link
+    function openWhatsApp() {
       const text = encodeURIComponent("Maan gayi baba! I forgive you... 🥰 Ab jaldi se aao or hugs do! ❤️");
       window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
     }
 
-    // Modal Helpers
     function toggleModal(id) {
-      const modal = document.getElementById(id);
-      if (modal) modal.classList.toggle('hidden');
+      const m = document.getElementById(id);
+      if (m) m.classList.toggle('hidden');
     }
 
-    // Floating heart particles
-    function spawnParticles() {
-      const box = document.getElementById('particles-container');
+    // Floating Ambient Petals & Hearts
+    function spawnParticle() {
+      const box = document.getElementById('ambient-particles');
       if (!box) return;
 
       const p = document.createElement('div');
-      const symbols = ['❤️', '💖', '🌸', '✨', '💕', '🌷', '🎀'];
-      p.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-      p.className = 'absolute text-xs sm:text-sm select-none pointer-events-none transition-all';
+      const glyphs = ['🌹', '✨', '💖', '🌸', '💫'];
+      p.textContent = glyphs[Math.floor(Math.random() * glyphs.length)];
+      p.className = 'absolute text-xs select-none pointer-events-none';
       p.style.left = Math.random() * 95 + 'vw';
-      p.style.bottom = '-30px';
-      p.style.opacity = (Math.random() * 0.35 + 0.15).toFixed(2);
-      p.style.transform = `scale(${Math.random() * 0.6 + 0.6})`;
+      p.style.bottom = '-20px';
+      p.style.opacity = (Math.random() * 0.4 + 0.25).toFixed(2);
       box.appendChild(p);
 
-      let b = -30;
+      let b = -20;
       const speed = Math.random() * 1.2 + 0.6;
       let angle = 0;
 
-      const timer = setInterval(() => {
+      const interval = setInterval(() => {
         b += speed;
         angle += 0.04;
         p.style.bottom = b + 'px';
         p.style.transform = `translateX(${Math.sin(angle) * 14}px)`;
 
-        if (b > window.innerHeight + 40) {
-          clearInterval(timer);
+        if (b > window.innerHeight + 30) {
+          clearInterval(interval);
           p.remove();
         }
       }, 25);
     }
-    setInterval(spawnParticles, 900);
+    setInterval(spawnParticle, 950);
 
-    // ========================================================
-    // SYNTHESIZED ROMANTIC WEB AUDIO LULLABY
-    // ========================================================
-    let audioCtx = null;
-    let isPlaying = false;
-    let musicTimer = null;
+    // Synthesized Web Audio Chimes
+    let audioContext = null;
+    let isMelodyPlaying = false;
+    let melodyTimer = null;
 
     function initAudio() {
-      if (!audioCtx) {
-        const AudioContext = window.AudioContext || window.webkitAudioContext;
-        audioCtx = new AudioContext();
+      if (!audioContext) {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        audioContext = new AudioCtx();
       }
-      if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
+      if (audioContext.state === 'suspended') {
+        audioContext.resume();
       }
     }
 
-    function playTone(freq, type = 'sine', duration = 0.5, vol = 0.08) {
+    function playTone(freq, duration = 0.45, vol = 0.06) {
       try {
         initAudio();
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
+        const osc = audioContext.createOscillator();
+        const gain = audioContext.createGain();
 
-        osc.type = type;
-        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, audioContext.currentTime);
 
-        gain.gain.setValueAtTime(vol, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+        gain.gain.setValueAtTime(vol, audioContext.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioContext.currentTime + duration);
 
         osc.connect(gain);
-        gain.connect(audioCtx.destination);
+        gain.connect(audioContext.destination);
 
         osc.start();
-        osc.stop(audioCtx.currentTime + duration);
-      } catch (err) {
-        console.warn('Audio not initialized yet', err);
+        osc.stop(audioContext.currentTime + duration);
+      } catch (e) {
+        // Audio will activate on user gesture
       }
     }
 
-    function playChimeNote(freq) {
-      playTone(freq, 'triangle', 0.45, 0.06);
+    function playChime(freq) {
+      playTone(freq, 0.45, 0.07);
     }
 
-    function playCelebrationArpeggio() {
-      const notes = [523.25, 659.25, 783.99, 1046.50];
-      notes.forEach((freq, idx) => {
-        setTimeout(() => playTone(freq, 'sine', 0.6, 0.12), idx * 130);
-      });
-    }
-
-    const lullabyNotes = [
-      329.63, 392.00, 440.00, 523.25,
-      440.00, 392.00, 349.23, 329.63,
-      293.66, 349.23, 392.00, 440.00,
-      392.00, 329.63, 293.66, 261.63
-    ];
-    let notePos = 0;
+    const melodyFrequencies = [329.63, 392.00, 440.00, 523.25, 440.00, 392.00, 349.23, 329.63];
+    let noteIndex = 0;
 
     function toggleAudio() {
       initAudio();
-      isPlaying = !isPlaying;
+      isMelodyPlaying = !isMelodyPlaying;
+      const icon = document.getElementById('musicIndicator');
 
-      const icon = document.getElementById('musicIcon');
-      const label = document.getElementById('musicLabel');
-
-      if (isPlaying) {
+      if (isMelodyPlaying) {
         icon.textContent = "🔊";
-        if (label) label.textContent = "Pause Music";
-        musicTimer = setInterval(() => {
-          playTone(lullabyNotes[notePos], 'sine', 0.8, 0.045);
-          notePos = (notePos + 1) % lullabyNotes.length;
-        }, 650);
+        melodyTimer = setInterval(() => {
+          playTone(melodyFrequencies[noteIndex], 0.7, 0.04);
+          noteIndex = (noteIndex + 1) % melodyFrequencies.length;
+        }, 600);
       } else {
         icon.textContent = "🎵";
-        if (label) label.textContent = "Play Romantic Music";
-        if (musicTimer) clearInterval(musicTimer);
+        if (melodyTimer) clearInterval(melodyTimer);
       }
     }
   </script>
